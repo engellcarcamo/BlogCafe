@@ -18,6 +18,7 @@ body {
 /*Estilos Globales*/
 .contenedor {
   max-width: 120rem;
+  width: 95%;
   margin: 0 auto;
 }
 h1,
@@ -31,6 +32,7 @@ h1 {
 }
 h2 {
   font-size: 4rem;
+  line-height: 1.2;
 }
 h3 {
   font-size: 3.2rem;
@@ -47,6 +49,31 @@ img {
 }
 .no-margin {
   margin: 0;
+}
+
+/* Botones*/
+.btn {
+  display: block;
+  text-align: center;
+  margin: 2rem 0;
+  padding: 1rem 3rem;
+  color: #ffffff;
+  text-decoration: none;
+  font-family: "PT Sans", sans-serif;
+  text-transform: uppercase;
+  font-size: 2rem;
+}
+.btn-primario {
+  background-color: #000000;
+}
+.btn-secundario {
+  background-color: #784d3c;
+}
+
+@media (min-width: 768px) {
+  .btn {
+    display: inline-block;
+  }
 }
 
 /* Seccion Header */
@@ -100,4 +127,82 @@ img {
 }
 .texto-header p {
   font-size: 2.2rem;
+}
+
+/*Contenido principal HOME*/
+.contenido-principal {
+  display: flex;
+  flex-wrap: wrap;
+}
+.contenido-principal h2 {
+  margin-block: 3rem;
+  font-size: 3.5rem;
+}
+.blog,
+.cursos {
+  flex: 0 0 100%;
+}
+.cursos {
+  order: -1;
+}
+
+@media (min-width: 768px) {
+  .contenido-principal {
+    justify-content: space-between;
+  }
+  .blog {
+    flex-basis: 62%;
+    order: -1;
+  }
+  .cursos {
+    flex-basis: calc(38% - 4rem);
+  }
+}
+
+/*estilo opcional*/
+/* .entrada-blog{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 2rem;
+  margin-block-end: 2rem;
+  border-block-end: 1px solid #e1e1e1;
+}
+.entrada-blog:last-of-type{
+  border-block-end:none;
+}
+
+.entrada-blog .imagen{
+  flex: 0 0 40%;
+}
+.entrada-blog .contenid-blog{
+  flex: 0 0 calc(60% - 2rem);
+} */
+
+.entrada-blog {
+  margin-block-end: 2rem;
+  border-block-end: 1px solid #e1e1e1;
+}
+.entrada-blog:last-of-type {
+  border-block-end: none;
+}
+
+/* seccion barra lateral*/
+.cursos-lista {
+  padding: 0;
+  list-style-type: none;
+}
+.curso {
+  border-block-end: 1px solid #e1e1e1;
+}
+.curso:last-of-type {
+  border-block-end: none;
+}
+.curso p {
+  font-family: "PT Sans", sans-serif;
+  font-weight: 700;
+  font-size: 2rem;
+}
+.curso p span {
+  font-weight: 400;
 }
